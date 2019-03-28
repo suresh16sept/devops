@@ -1,2 +1,68 @@
 #command demonstration in GIT
 git config -l (this command list down all the global configuration of git)
+
+
+#issue and solution 
+#==================
+root@suresh:~/myproject# git push -u origin master
+Username for 'https://github.com': suresh16sept
+Password for 'https://suresh16sept@github.com': 
+To https://github.com/suresh16sept/devops.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/suresh16sept/devops.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+root@suresh:~/myproject# 
+
+root@suresh:~/myproject# git remote add origin https://github.com/suresh16sept/devops
+fatal: remote origin already exists.
+root@suresh:~/myproject# git pull --rebase origin master
+warning: no common commits
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 15 (delta 3), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+From https://github.com/suresh16sept/devops
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+First, rewinding head to replay your work on top of it...
+Applying: DevOps Notes file call DevOps.txt
+root@suresh:~/myproject# git push origin master
+Username for 'https://github.com': suresh16sept
+Password for 'https://suresh16sept@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 380 bytes | 380.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/suresh16sept/devops.git
+   77ee98a..6a1f826  master -> master
+root@suresh:~/myproject# 
+
+Issue:
+=====
+error: failed to push some refs to 'https://github.com/suresh16sept/devops.git'
+===============================================================================
+
+Solutions:
+=========
+git pull --rebase origin master
+
+
+root@suresh:~/myproject# git push origin master
+Username for 'https://github.com': suresh16sept
+Password for 'https://suresh16sept@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 380 bytes | 380.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/suresh16sept/devops.git
+   77ee98a..6a1f826  master -> master
+root@suresh:~/myproject#
+
+
