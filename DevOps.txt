@@ -65,4 +65,12 @@ To https://github.com/suresh16sept/devops.git
    77ee98a..6a1f826  master -> master
 root@suresh:~/myproject#
 
+====================================================================================
 
+GIT Tutorial Note:
+
+1) #git add .
+2) #git commit -m "Message are remarcks/note"
+3) #git remote add origin https://github.com/suresh16sept/devops.git
+4) #git push origin master
+5) #git pull --rebase origin master  (this command is used to Rebasing is the process of moving or combining a sequence of commits to a new base commit. Rebasing is most useful and easily visualized in the context of a feature branching workflow)
