@@ -1,0 +1,2 @@
+#command demonstration in GIT
+git config -l (this command list down all the global configuration of git)
