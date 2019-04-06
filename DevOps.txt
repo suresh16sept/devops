@@ -74,3 +74,27 @@ GIT Tutorial Note:
 3) #git remote add origin https://github.com/suresh16sept/devops.git
 4) #git push origin master
 5) #git pull --rebase origin master  (this command is used to Rebasing is the process of moving or combining a sequence of commits to a new base commit. Rebasing is most useful and easily visualized in the context of a feature branching workflow)
+
+
+==========================================================================================
+To setup email and user ID in github account on linux terminal:
+
+[root@k8smaster ~]# git config --global user.name "suresh16sept"
+[root@k8smaster ~]# git config --global user.email "suresh16sept@gmail.com"
+
+[root@k8smaster /]# git remote add origin https://github.com/suresh16sept/devops.git
+
+[root@k8smaster /]# git push origin master
+
+[root@k8smaster /]# git push origin master
+Username for 'https://github.com': suresh16sept
+Password for 'https://suresh16sept@github.com':
+Counting objects: 4, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 4.83 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/suresh16sept/devops.git
+   cdabbdd..e29580d  master -> master
+[root@k8smaster /]#
+
+
